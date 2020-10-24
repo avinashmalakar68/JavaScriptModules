@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to empty an Array in JavaScript?</title>
+</head>
+<body>
+	<p>By assigning []</p>
+	<script type="text/javascript">
+		var even = [2,4,6,8,10];
+		document.writeln("Even array : "+even);
+		even = [];
+		document.writeln("Even array after empty : "+even);
+	</script>
+	<p>By using length property</p>
+	<script type="text/javascript">
+		var odd = [1,3,5,7,9];
+		document.writeln("odd array : "+odd);
+		odd.length = 0;
+		document.writeln("odd array after empty: "+odd);
+	</script>
+	<p>By splice method</p>
+	<script type="text/javascript">
+		var prime = [2,3,5,7,11];
+		document.writeln("prime array : "+prime);
+		prime.splice(0,prime.length);
+		document.writeln("prime array after empty : "+prime);
+	</script>
+</body>
+</html> 
