@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>call() method</title> 
+	</head> 
+	
+	<body > 
+
+		<button onClick="fun()"> 
+			click 
+		</button> 
+		
+		<p id="demo"></p> 
+		
+		<!-- Script to use call() method to call 
+			function -->
+		<script> 
+			function fun() { 
+			let p = { 
+				fullName: function(addr1, addr2) { 
+				return this.fName + " " + this.lName 
+						+ ", " + addr1 + ", " + addr2; 
+				} 
+			} 
+				
+			let p1 = { 
+				fName:"fName", 
+				lName: "lName", 
+			} 
+				
+			let x = p.fullName.call(p1, "India", "USA"); 
+			document.getElementById("demo").innerHTML = x; 
+			} 
+		</script> 
+		<p id ="demo1"></p>
+		<script> 
+            function fun() { 
+                let p = { 
+                fullName: function(addr1, addr2) { 
+                    return this.fName + " " + this.lName 
+                            + ", " + addr1 + ", " + addr2; 
+                } 
+            } 
+            let p1 = { 
+                fName:"fName", 
+                lName: "lName", 
+            } 
+                let x = p.fullName.apply(p1, ["India", "USA"]);  
+                document.getElementById("demo1").innerHTML = x; 
+            } 
+        </script> 
+	</body> 
+</html> 
