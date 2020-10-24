@@ -1,0 +1,12 @@
+What is the difference between call and apply in JavaScript?
+
+call() Method: It calls the method, taking the owner object as argument.
+The keyword this refers to the ‘owner’ of the function or the object it belongs to. 
+We can call a method which can be used on different objects.
+
+object.objectMethod.call( objectInstance, arguments )
+
+apply() Method: The apply() method is used to write methods, which can be used on different objects.
+It is different from the function call() because it takes arguments as an array.
+
+object.objectMethod.apply(objectInstance, arrayOfArguments)
