@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1st Jan being Sunday </title>
+</head>
+<body>
+	<script type="text/javascript">
+		for (var year = 2014; year <=2050; year++) {
+			var d = new Date(year,0,1);
+			if(d.getDay() === 0)
+				document.writeln("1st jan being Sunday in"+year);
+		}
+	</script>
+
+</body>
+</html>
